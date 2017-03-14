@@ -1,0 +1,9 @@
+Plug 'editorconfig/editorconfig-vim'
+Plug 'Yggdroot/indentLine'
+Plug 'othree/jspc.vim'
+Plug 'ervandew/supertab'
+Plug 'ternjs/tern_for_vim'
+Plug 'SirVer/ultisnips'
+Plug 'elzr/vim-json'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'tpope/vim-dispatch'
