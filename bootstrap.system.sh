@@ -33,6 +33,7 @@ mkdir -p /home/jtpape/projects/java
 mkdir -p /home/jtpape/projects/go
 mkdir -p /home/jtpape/projects/ruby
 mkdir -p /home/jtpape/projects/python
+mkdir -p /home/jtpape/che
 
 # Install grab Eclipse and Eclin and start it up
 cd ~
@@ -79,3 +80,5 @@ echo "source \"${GITAWAREPROMPT}/main.sh\"" >> /home/jtpape/.bashrc
 echo 'export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "' >> /home/jtpape/.bashrc
 
 # TBD Eclipse Che
+sudo chmod ugo+rwx /var/run/docker.sock
+docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v /home/jtpape/che:/data eclipse/che start
