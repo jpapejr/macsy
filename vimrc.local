@@ -12,3 +12,4 @@ let g:vim_json_syntax_conceal = 0
 "for vim-go
 let g:go_auto_type_info = 1
 set updatetime=100
+set t_ut=
