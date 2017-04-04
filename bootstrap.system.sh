@@ -4,7 +4,8 @@ GIT_TOKEN=""
 USER_HOME=""
 
 # Install prereq Ubuntu packages
-sudo apt-get update && sudo apt-get install -y openjdk-8-jdk xvfb build-essential cmake python-dev python3-dev apt-transport-https ca-certificates curl software-properties-common bison mercurial make binutils gcc golang
+sudo apt-get update && sudo apt-get install -y xvfb build-essential cmake python-dev python3-dev apt-transport-https ca-certificates curl software-properties-common bison mercurial make binutils gcc golang
+sudo add-apt-repository ppa:webupd8team/java && sudo apt-get update && apt-get install -y oracle-java9-installer 
 
 # Install the CF CLI
 cp ./cf.tgz /tmp/cf.tgz
