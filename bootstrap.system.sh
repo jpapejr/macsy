@@ -52,17 +52,14 @@ chmod +x ~/nave.sh && sudo ln -s /home/jtpape/nave.sh /usr/local/bin/nave
 sudo nave usemain 6.9.5
 
 # Get the tern.js project file in place
-cd /home/jtpape/vimmy
+cd /home/jtpape/macsy
 cp tern-project /home/jtpape/.tern-project
 
-# Crank up Vim
-cp ./vimrc /home/jtpape/.vimrc
-cp ./vimrc.local /home/jtpape/.vimrc.local
-cp ./vimrc.local.bundles /home/jtpape/.vimrc.local.bundles
-
-sudo apt-get install -y vim
-cd /home/jtpape && vim +PlugInstall +qall
-cd /home/jtpape/.vim/plugged/tern_for_vim && sudo npm install
+# Set up emacs
+sudo add-apt-repository -y ppa:ubuntu-elisp
+sudo apt-get update
+sudo apt-get install emacs-snapshot
+cp emacs /home/jtpape/.emacs
 
 # ensure we have some eslint dependencies
 sudo npm install -g eslint
