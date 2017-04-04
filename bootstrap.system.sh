@@ -186,7 +186,7 @@ tput sgr0
 # Set up emacs
 sudo apt-add-repository -y ppa:adrozdoff/emacs
 sudo apt update
-sudo apt install emacs25
+sudo apt install -y emacs25
 cp emacs /home/$USER_HOME/.emacs
 
 tput setaf 1
