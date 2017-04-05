@@ -85,7 +85,11 @@
 (use-package ac-emacs-eclim-source :ensure t)
 (use-package company :ensure t)
 (use-package company-emacs-eclim :ensure t)
+(use-package company-tern :ensure t)
 (use-package powerline :ensure t)
+(use-package tern :ensure t)
+(use-package tern-auto-complete :ensure t)
+
 
 
 
