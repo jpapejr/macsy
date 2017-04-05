@@ -80,7 +80,6 @@
 (use-package neotree :ensure t)
 (use-package eclim :ensure t)
 (use-package popwin :ensure t)
-(use-package auto-complete-config :ensure t)
 (use-package popwin :ensure t)
 (use-package ac-emacs-eclim-source :ensure t)
 (use-package company :ensure t)
