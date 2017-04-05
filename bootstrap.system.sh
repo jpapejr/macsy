@@ -168,6 +168,7 @@ echo '**************************************************************************
 tput sgr0
 
 # Get the tern.js project file in place
+sudo npm install -g tern
 cd /home/$USER_HOME/macsy
 cp tern-project /home/$USER_HOME/.tern-project
 
@@ -201,8 +202,7 @@ echo '**************************************************************************
 tput sgr0
 
 # ensure we have some eslint dependencies
-sudo npm install -g eslint
-sudo npm install -g babel-eslint
+sudo npm install -g eslint babel-eslint eslint-plugin-import eslint-config-airbnb-base
 
 tput setaf 1
 echo '*************************************************************************************'
