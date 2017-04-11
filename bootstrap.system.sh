@@ -226,6 +226,10 @@ echo "export GITAWAREPROMPT=~/.bash/git-aware-prompt" >> /home/$USER_HOME/.bashr
 echo "source \"${GITAWAREPROMPT}/main.sh\"" >> /home/$USER_HOME/.bashrc
 echo 'export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "' >> /home/$USER_HOME/.bashrc
 
+echo 'export ALTERNATE_EDITOR=""' >> /home/$USER_HOME/.bashrc
+echo 'export EDITOR=emacsclient' >> /home/$USER_HOME/.bashrc
+echo "alias emacs=\'emacsclient -t\'" >> /home/$USER_HOME/.bashrc
+
 tput setaf 1
 echo '*************************************************************************************'
 echo '*                                                                                   *'
