@@ -230,6 +230,8 @@ echo 'export ALTERNATE_EDITOR=""' >> /home/$USER_HOME/.bashrc
 echo 'export EDITOR=emacsclient' >> /home/$USER_HOME/.bashrc
 echo "alias emacs=\'emacsclient -t\'" >> /home/$USER_HOME/.bashrc
 
+go get github.com/yudai/gotty
+
 tput setaf 1
 echo '*************************************************************************************'
 echo '*                                                                                   *'
