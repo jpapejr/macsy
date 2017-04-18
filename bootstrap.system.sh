@@ -15,7 +15,7 @@ echo '**************************************************************************
 tput sgr0
 
 # Install prereq Ubuntu packages
-sudo apt-get update && sudo apt-get install -y xvfb build-essential cmake python-dev python3-dev apt-transport-https ca-certificates curl software-properties-common bison mercurial make binutils gcc golang
+sudo apt-get update && sudo apt-get install -y xvfb build-essential cmake python-dev python3-dev apt-transport-https ca-certificates curl software-properties-common bison mercurial make binutils gcc golang ngrok-client
 sudo add-apt-repository ppa:webupd8team/java && sudo apt-get update && apt-get install -y oracle-java8-installer 
 
 tput setaf 1
