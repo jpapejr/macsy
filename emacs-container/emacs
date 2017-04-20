@@ -81,7 +81,7 @@
 (use-package eclim :ensure t)
 (use-package popwin :ensure t)
 (use-package popwin :ensure t)
-(use-package ac-emacs-eclim-source :ensure t)
+;;(use-package ac-emacs-eclim-source :ensure t)
 (use-package company :ensure t)
 (use-package company-emacs-eclim :ensure t)
 (use-package company-tern :ensure t)
@@ -130,6 +130,7 @@
 (require 'eclim)
 (setq eclimd-autostart t)
 (global-eclim-mode)
+(setq eclim-executable "~/eclipse/eclim")
 
 ;; save temp files to $TEMP and not in my directories
 (setq backup-directory-alist
