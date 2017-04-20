@@ -51,23 +51,23 @@ tput sgr0
 cp ./bmx-cli.tgz /tmp/bmx-cli.tgz
 cd /tmp && tar xvfz bmx-cli.tgz && cd /tmp/Bluemix_CLI && sudo ./install_bluemix_cli && cd -
 
+#
+# tput setaf 1
+# echo '*************************************************************************************'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*                  Install Docker Community Edition                                 *'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*************************************************************************************'
+# tput sgr0
 
-tput setaf 1
-echo '*************************************************************************************'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*                  Install Docker Community Edition                                 *'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*************************************************************************************'
-tput sgr0
-
-
-# Get Docker going
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
-sudo apt-get update && sudo apt-get install -y docker-ce
+#
+# # Get Docker going
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# sudo add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
+# sudo apt-get update && sudo apt-get install -y docker-ce
 
 tput setaf 1
 echo '*************************************************************************************'
@@ -118,26 +118,26 @@ git config --global user.name "$GIT_NAME"
 # mkdir -p /home/$USER_HOME/projects/python
 # mkdir -p /home/$USER_HOME/che
 
-tput setaf 1
-echo '*************************************************************************************'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*                  Install Eclipse and Eclin                                        *'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*************************************************************************************'
-tput sgr0
-
-# Install grab Eclipse and Eclin and start it up
-cd ~
-wget "http://eclipse.mirror.rafal.ca/technology/epp/downloads/release/neon/2/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz"
-wget "https://github.com/ervandew/eclim/releases/download/2.6.0/eclim_2.6.0.jar"
-tar -zxf eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz
-echo "osgi.instance.area.default=@user.home/projects/java" >> ~/.eclimrc
-Xvfb :1 -screen 0 1024x768x24 &
-java -Dvim.files=$HOME/.vim -Declipse.home=/home/$USER_HOME/eclipse -jar eclim_2.6.0.jar install
-cd eclipse && DISPLAY=:1 ./eclipse/eclimd -b && cd -
+# tput setaf 1
+# echo '*************************************************************************************'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*                  Install Eclipse and Eclin                                        *'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*************************************************************************************'
+# tput sgr0
+#
+# # Install grab Eclipse and Eclin and start it up
+# cd ~
+# wget "http://eclipse.mirror.rafal.ca/technology/epp/downloads/release/neon/2/eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz"
+# wget "https://github.com/ervandew/eclim/releases/download/2.6.0/eclim_2.6.0.jar"
+# tar -zxf eclipse-jee-neon-2-linux-gtk-x86_64.tar.gz
+# echo "osgi.instance.area.default=@user.home/projects/java" >> ~/.eclimrc
+# Xvfb :1 -screen 0 1024x768x24 &
+# java -Dvim.files=$HOME/.vim -Declipse.home=/home/$USER_HOME/eclipse -jar eclim_2.6.0.jar install
+# cd eclipse && DISPLAY=:1 ./eclipse/eclimd -b && cd -
 
 # tput setaf 1
 # echo '*************************************************************************************'
