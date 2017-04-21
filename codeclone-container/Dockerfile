@@ -13,6 +13,5 @@ ADD entry.sh /entry.sh
 RUN chmod +x /entry.sh
 
 WORKDIR /projects
-RUN setfacl -R -d -m o::rwx /projects
 
 ENTRYPOINT ["/entry.sh"]

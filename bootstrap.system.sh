@@ -17,39 +17,39 @@
 # # Install prereq Ubuntu packages
 # sudo apt-get update && sudo apt-get install -y xvfb build-essential cmake python-dev python3-dev apt-transport-https ca-certificates curl software-properties-common bison mercurial make binutils gcc golang ngrok-client
 # sudo add-apt-repository ppa:webupd8team/java && sudo apt-get update && apt-get install -y oracle-java8-installer
-
-tput setaf 1
-echo '*************************************************************************************'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*                  Install the Cloud Foundry CLI                                    *'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*************************************************************************************'
-tput sgr0
-
-
-# Install the CF CLI
-cp ./cf.tgz /tmp/cf.tgz
-cd /tmp && tar xvfz cf.tgz && sudo mv /tmp/cf /usr/local/bin/cf && cd -
-sudo chmod +x /usr/local/bin/cf
-
-tput setaf 1
-echo '*************************************************************************************'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*                  Install the Bluemix CLI                                          *'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*************************************************************************************'
-tput sgr0
-
-
-# Install the BMX CLI
-cp ./bmx-cli.tgz /tmp/bmx-cli.tgz
-cd /tmp && tar xvfz bmx-cli.tgz && cd /tmp/Bluemix_CLI && sudo ./install_bluemix_cli && cd -
+#
+# tput setaf 1
+# echo '*************************************************************************************'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*                  Install the Cloud Foundry CLI                                    *'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*************************************************************************************'
+# tput sgr0
+#
+#
+# # Install the CF CLI
+# cp ./cf.tgz /tmp/cf.tgz
+# cd /tmp && tar xvfz cf.tgz && sudo mv /tmp/cf /usr/local/bin/cf && cd -
+# sudo chmod +x /usr/local/bin/cf
+#
+# tput setaf 1
+# echo '*************************************************************************************'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*                  Install the Bluemix CLI                                          *'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*************************************************************************************'
+# tput sgr0
+#
+#
+# # Install the BMX CLI
+# cp ./bmx-cli.tgz /tmp/bmx-cli.tgz
+# cd /tmp && tar xvfz bmx-cli.tgz && cd /tmp/Bluemix_CLI && sudo ./install_bluemix_cli && cd -
 
 #
 # tput setaf 1
@@ -68,17 +68,17 @@ cd /tmp && tar xvfz bmx-cli.tgz && cd /tmp/Bluemix_CLI && sudo ./install_bluemix
 # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 # sudo add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
 # sudo apt-get update && sudo apt-get install -y docker-ce
-
-tput setaf 1
-echo '*************************************************************************************'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*                  Install Bluemix OpenWhisk CLI                                    *'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*                                                                                   *'
-echo '*************************************************************************************'
-tput sgr0
+#
+# tput setaf 1
+# echo '*************************************************************************************'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*                  Install Bluemix OpenWhisk CLI                                    *'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*                                                                                   *'
+# echo '*************************************************************************************'
+# tput sgr0
 
 #Get OpenWhisk CLI
 wget "https://openwhisk.ng.bluemix.net/cli/go/download/linux/amd64/wsk"
