@@ -8,10 +8,10 @@ To make things easier, here are some aliases and other helpful things to add to 
 
 
 ### .bashrc
-alias emacs='docker-compose exec emacs emacs
-alias code='docker-compose exec code /bin/bash
+alias emacs='docker-compose exec emacs emacs'
+alias code='docker-compose exec code /bin/bash'
 export GOPATH=~/go
-export PATH=PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
 
 ### useful apps/packages
 - build essentials (yum groupinstall "Development Tools" | apt-get install build-essential)
