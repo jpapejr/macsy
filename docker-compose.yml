@@ -9,12 +9,14 @@ services:
     network_mode: "host"
     extra_hosts:
      - "moby:127.0.0.1"
+    hostname: emacs
   code:
     image: jpapejr/codeclone:1.0.0
     build: ./codeclone-container
     volumes:
       - code:/projects
       - utils:/opt/utils
+    hostname: code
   eclipse-eclim:
     image: jpapejr/eclipse-eclim:1.0.0
     build: ./eclipse-eclim-container
@@ -22,11 +24,13 @@ services:
       - code:/projects
       - eclipse-eclim:/ee
     network_mode: "host" 
+    hostname: eclipse-eclim
   utils:
     image: jpapejr/utils:1.0.0
     build: ./utils-container
     volumes:
       - utils:/opt/utils
+    hostname: utils
 
 volumes:
   code:
