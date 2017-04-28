@@ -1,22 +1,3 @@
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default)))
- '(package-selected-packages
-   (quote
-    (flycheck coffee-mode tern tern-auto-complete tern-context-coloring git-gutter yaml-mode use-package smart-mode-line-powerline-theme popwin neotree monokai-theme magit helm dockerfile-mode docker direx company-emacs-eclim ac-emacs-eclim))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
-
 (require 'package)
 
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
@@ -61,7 +42,6 @@
     (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 
-
 (eval-when-compile
     (require 'use-package))
 
@@ -73,10 +53,9 @@
 (use-package git-gutter :ensure t)
 (use-package helm :ensure t)
 (use-package magit :ensure t)
-(use-package monokai-theme :ensure t)
 (use-package popwin :ensure t)
-(use-package smart-mode-line-powerline-theme :ensure t)
 (use-package yaml-mode :ensure t)
+(use-package neotree :ensure t)
 (use-package neotree :ensure t)
 (use-package eclim :ensure t)
 (use-package popwin :ensure t)
@@ -85,14 +64,15 @@
 (use-package company :ensure t)
 (use-package company-emacs-eclim :ensure t)
 (use-package company-tern :ensure t)
-(use-package powerline :ensure t)
 (use-package tern :ensure t)
 (use-package tern-auto-complete :ensure t)
 
-
 ;;magit colors
 (custom-set-faces
- ;; other faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(magit-diff-added ((((type tty)) (:foreground "green"))))
  '(magit-diff-added-highlight ((((type tty)) (:foreground "LimeGreen"))))
  '(magit-diff-context-highlight ((((type tty)) (:foreground "default"))))
@@ -137,7 +117,7 @@
           `((".*" . ,temporary-file-directory)))
     (setq auto-save-file-name-transforms
           `((".*" ,temporary-file-directory t)))
-
+          
 
 
 (setq help-at-pt-display-when-idle t)
@@ -157,15 +137,23 @@
 (company-emacs-eclim-setup)
 (global-company-mode t)
 
-(require 'powerline)
-(setq sml/theme 'respectful)
-(setq sml/no-confirm-load-theme t)
-(sml/setup)
-
-(powerline-default-theme)
 
 (add-hook 'js-mode-hook (lambda () (tern-mode t)))
 (eval-after-load 'tern
    '(progn
       (require 'tern-auto-complete)
       (tern-ac-setup)))
+
+(setq sml/no-confirm-load-theme t)
+(sml/setup)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default))))
+
+(set-face-background 'vertical-border "gray")
+(set-face-foreground 'vertical-border (face-background 'vertical-border))
