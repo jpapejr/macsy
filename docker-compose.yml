@@ -9,10 +9,6 @@ services:
     network_mode: "host"
     extra_hosts:
      - "moby:127.0.0.1"
-    depends_on: 
-      - code
-      - eclipse-eclim
-      - utils
   code:
     image: jpapejr/codeclone:1.0.0
     build: ./codeclone-container
@@ -26,8 +22,6 @@ services:
       - code:/projects
       - eclipse-eclim:/ee
     network_mode: "host" 
-    depends_on:
-      - code
   utils:
     image: jpapejr/utils:1.0.0
     build: ./utils-container
