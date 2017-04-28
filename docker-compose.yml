@@ -18,6 +18,7 @@ services:
     build: ./codeclone-container
     volumes:
       - code:/projects
+      - utils:/opt/utils
   eclipse-eclim:
     image: jpapejr/eclipse-eclim:1.0.0
     build: ./eclipse-eclim-container
