@@ -9,9 +9,10 @@ To make things easier, here are some aliases and other helpful things to add to 
 
 ### .bashrc
 alias emacs='docker-compose exec emacs emacs'
-alias code='docker-compose exec code /bin/bash'
+alias code='docker exec -it -e GHE_TOKEN=$GHE_TOKEN macsy_code_1 /bin/bash'
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
+export GHE_TOKEN=<git personal access token> _
 
 ### useful apps/packages
 - build essentials (yum groupinstall "Development Tools" | apt-get install build-essential)
