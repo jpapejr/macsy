@@ -8,7 +8,7 @@ services:
       - eclipse-eclim:/home/macsy/eclipse
     network_mode: "host"
     extra_hosts:
-     - "moby:127.0.0.1"
+     - "emacs:127.0.0.1"
     hostname: emacs
   code:
     image: jpapejr/codeclone:1.0.0
