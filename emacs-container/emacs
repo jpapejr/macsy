@@ -66,6 +66,7 @@
 (use-package company-tern :ensure t)
 (use-package tern :ensure t)
 (use-package tern-auto-complete :ensure t)
+(use-package smart-mode-line :ensure t)
 
 ;;magit colors
 (custom-set-faces
