@@ -3,6 +3,10 @@ Bootstrapping a VM for my dev flow
 
 Installation/Start-up sequence
 
+Bleeding edge - `git clone https://github.com/jpapejr/macsy`
+Specific release - `git clone -b "release" https://github.com/jpapejr/macsy`
+
+After clone: 
 1. `docker-compose up eclipse-eclim utils`
 2. `docker-compose up -d code`
 3. `docker-compomse up -d emacs`
