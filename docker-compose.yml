@@ -1,0 +1,48 @@
+version: "3"
+services:
+  emacs:
+    image: jpapejr/emacs:1.0.0
+    build: ./emacs-container
+    volumes:
+      - code:/projects
+      - eclipse-eclim:/home/macsy/eclipse
+    network_mode: "host"
+    extra_hosts:
+     - "emacs:127.0.0.1"
+    hostname: emacs
+  code:
+    image: jpapejr/codeclone:1.0.0
+    build: ./codeclone-container
+    volumes:
+      - code:/projects
+      - utils:/opt/utils
+    hostname: code
+  eclipse-eclim:
+    image: jpapejr/eclipse-eclim:1.0.0
+    build: ./eclipse-eclim-container
+    volumes:
+      - code:/projects
+      - eclipse-eclim:/ee
+    network_mode: "host" 
+    hostname: eclipse-eclim
+  utils:
+    image: jpapejr/utils:1.0.0
+    build: ./utils-container
+    volumes:
+      - utils:/opt/utils
+    hostname: utils
+
+volumes:
+  code:
+    labels:
+      macsy.purpose: "A place to hold code"
+  utils:
+    labels:
+      macsy.purpose: "A grab-bag of useful utilities"
+      macsy.bmxcli.ver: ""
+      macsy.cfcli.ver: ""
+  eclipse-eclim:
+    labels:
+      macsy.purpose: "Provides the Eclipse/Eclim runtime"
+      macsy.eclipse.ver: "eclipse-j2ee-neon-2"
+      macsy.eclim.ver: "2.6.0"
