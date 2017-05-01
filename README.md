@@ -9,7 +9,7 @@ Specific release - `git clone -b "release" https://github.com/jpapejr/macsy`
 After clone: 
 1. `docker-compose up eclipse-eclim utils`
 2. `docker-compose up -d code`
-3. `docker-compomse up -d emacs`
+3. `docker-compose up -d emacs`
 
 
 ## Shell Fix-ups
