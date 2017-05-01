@@ -1,7 +1,7 @@
 version: "3"
 services:
   emacs:
-    image: jpapejr/emacs:1.0.0
+    image: jpapejr/emacs:xavier
     build: ./emacs-container
     volumes:
       - code:/projects
@@ -11,14 +11,14 @@ services:
      - "emacs:127.0.0.1"
     hostname: emacs
   code:
-    image: jpapejr/codeclone:1.0.0
+    image: jpapejr/codeclone:xavier
     build: ./codeclone-container
     volumes:
       - code:/projects
       - utils:/opt/utils
     hostname: code
   eclipse-eclim:
-    image: jpapejr/eclipse-eclim:1.0.0
+    image: jpapejr/eclipse-eclim:xavier
     build: ./eclipse-eclim-container
     volumes:
       - code:/projects
@@ -26,7 +26,7 @@ services:
     network_mode: "host" 
     hostname: eclipse-eclim
   utils:
-    image: jpapejr/utils:1.0.0
+    image: jpapejr/utils:xavier
     build: ./utils-container
     volumes:
       - utils:/opt/utils
