@@ -38,3 +38,4 @@ export GHE_TOKEN=<git personal access token> _
   >systemctl start docker
   >add self to `docker` group
 - docker-compose (curl -L https://github.com/docker/compose/releases/download/1.12.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose)
+- Portainer (http://portainer.io) (docker run -d -p 10000:9000 -v "/var/run/docker.sock:/var/run/docker.sock" portainer/portainer)
