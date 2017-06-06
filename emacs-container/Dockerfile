@@ -6,7 +6,7 @@ RUN useradd -s /bin/bash -m macsy
 RUN apt-get update && apt-get install -y bash git curl xvfb openjdk-8-jdk software-properties-common \
     && apt-add-repository -y ppa:adrozdoff/emacs && apt-get update \
     && apt-get install -y emacs25 \
-    && rm -rf /var/cache/apk/*
+    
     
 
 ADD https://raw.githubusercontent.com/isaacs/nave/master/nave.sh /home/macsy/nave.sh
